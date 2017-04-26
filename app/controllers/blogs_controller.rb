@@ -13,12 +13,13 @@ class BlogsController < ApplicationController
   # GET /blogs/1.json
   def show
     @page_title = @blog.title
+    @seo_keywords = @blog.body
   end
 
   # GET /blogs/new
   def new
     @blog = Blog.new
-    @seo_keywords = Blog.body
+    
   end
 
   # GET /blogs/1/edit
