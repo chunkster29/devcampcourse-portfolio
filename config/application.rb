@@ -18,6 +18,6 @@ Bundler.require(*Rails.groups)
 
 module DevcampPortfolio
   class Application < Rails::Application
-  
+ 
   end
 end
