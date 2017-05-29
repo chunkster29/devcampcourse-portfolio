@@ -5,7 +5,7 @@ class PortfoliosController < ApplicationController
 
   
   def index
-    @portfolio_items = Portfolio.by_position
+    @portfolio_items = Portfolio.by_position.page(params[:page]).per(9)
   end
   
   def sort
