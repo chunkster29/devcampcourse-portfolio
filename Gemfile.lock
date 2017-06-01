@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/chunkster29/Jturner_view_tool
+  revision: 8584fc416e38c5658a21e528289af3feef2f6cf3
+  specs:
+    Jturner_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -76,7 +82,6 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
-    devcamp_view_tool (0.1.0)
     devise (4.2.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -263,6 +268,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  Jturner_view_tool!
   bootstrap (~> 4.0.0.alpha6)
   byebug
   carrierwave (~> 1.0)
@@ -270,7 +276,6 @@ DEPENDENCIES
   cocoon (~> 1.2, >= 1.2.9)
   coderay (~> 1.1, >= 1.1.1)
   coffee-rails (~> 4.2)
-  devcamp_view_tool (~> 0.1.0)
   devise (~> 4.2)
   dotenv-rails (~> 2.1, >= 2.1.2)
   font-awesome-rails (~> 4.7, >= 4.7.0.1)
