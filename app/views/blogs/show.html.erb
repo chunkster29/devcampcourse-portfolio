@@ -21,7 +21,7 @@
   <%= render 'comments/comment_form' %>
    <%= paginate @comments %>
   <div id="comments" data-blog-id="<%= @blog.id %>">
-    <%= render partial: 'comments/comment', collection: @blog.comments  %>
+    <%= render @blog.comments.page(params[:page]).per(5)  %>
   </div>
   
 </div>

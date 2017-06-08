@@ -2,6 +2,10 @@ class CommentsController < ApplicationController
   def create
     @comment = current_user.comments.build(comment_params)
   end
+  
+  def show 
+    @comments = Comment.page(params[:page]).per(5)
+  end
 
   private
 
