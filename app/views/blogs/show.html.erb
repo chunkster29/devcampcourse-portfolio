@@ -19,10 +19,11 @@
   </p>
 
   <%= render 'comments/comment_form' %>
-
+   <%= paginate @comments %>
   <div id="comments" data-blog-id="<%= @blog.id %>">
-    <%= render @blog.comments %>
+    <%= render partial: 'comments/comment', collection: @blog.comments  %>
   </div>
+  
 </div>
 
 
