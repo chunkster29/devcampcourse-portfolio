@@ -5,4 +5,6 @@ class Comment < ApplicationRecord
   validates :content, presence: true, length: { minimum: 5, maximimum: 1000 }
 
   after_create_commit { CommentBroadcastJob.perform_later(self) }
+  
+  default_scope -> {order(updated_at: :desc)}
 end

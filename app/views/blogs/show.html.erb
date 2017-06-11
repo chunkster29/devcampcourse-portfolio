@@ -12,18 +12,15 @@
   </span>
 </nav>
 
-  <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
-
   <p>
     <%= markdown @blog.body %>
   </p>
 
   <%= render 'comments/comment_form' %>
-   <%= paginate @comments %>
-  <div id="comments" data-blog-id="<%= @blog.id %>">
-    <%= render @blog.comments.page(params[:page]).per(5)  %>
+   
+  <div id="messages">
+    <%= render partial: 'comments/comments', object: @comments %>
   </div>
-  
 </div>
 
 

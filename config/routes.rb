@@ -11,14 +11,14 @@ Rails.application.routes.draw do
   get 'about-me', to: 'pages#about'
   get 'contact', to: 'pages#contact'
   get 'tech-news', to: 'pages#tech_news'
-  
 
   resources :blogs do
+    resources :comments, only: [:create, :destroy]
     member do
       get :toggle_status
     end
   end
-
+  
   mount ActionCable.server => '/cable'
   
   root to: 'pages#home'
